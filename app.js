@@ -41,6 +41,7 @@ app.post('/', (req, res) => {
     // Set up email data
     const mailOptions = {
         from: email,
+        cc: email,
         to: process.env.TO, // recipient's email
         subject: `New message from ${name}`,
         text: message
