@@ -23,7 +23,7 @@ app.get("*", (req, res) =>
 );
 
 
-app.post('https://manjeet-kumar.vercel.app/', (req, res) => {
+app.post('https://manjeet-kumar.onrender.com/', (req, res) => {
     const { name, email, message } = req.body;
     // console.log(name);
     // console.log(email);
