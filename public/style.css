@@ -51,6 +51,29 @@ section{
   justify-content: center;
   align-items: center;
 }
+
+
+.contacts-section, .skills-section, .projects-section{
+  padding-top: 2rem;
+}
+
+.home-section, .contacts-section{
+  background-color: #f6f6f6;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #000;
+  overflow: hidden;
+  width: 100%;
+  /* background-color: orange; */
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+
+
 .projects, .contacts, .skills, .home{
   background-color: #f6f6f6;
   border-radius: 8px;
@@ -220,30 +243,6 @@ section{
 
 
 /* home */
-
-
-
-.contacts-section{
-  padding-top: 2rem;
-}
-
-.home-section, .contacts-section{
-  background-color: #f6f6f6;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  color: #000;
-  overflow: hidden;
-  width: 100%;
-  /* background-color: orange; */
-  display: flex;
-  /* flex-wrap: wrap; */
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* height: 100vh; */
-}
-
-
 
 .home-card{
   /* background-color: #2980b9; */
