@@ -14,7 +14,7 @@ body{
     /* background-color: #7d6d6d; */
     color: #000;
     margin: 0;
-    /* background-color: #555; */
+    /* background-color: #e64040; */
     padding: 0;
     font-family: Poppins,sans-serif;
     /* overflow-x: hidden; */
@@ -23,7 +23,10 @@ body{
 
 section{
   /* padding-top: 7rem; */
+  /* background-color: #000; */
 }
+
+
 
 #projectsid, #skillsid{
   /* padding: 2rem; */
@@ -198,7 +201,8 @@ section{
   cursor: pointer;
 }
 
-.navbar ul a {
+.navbar ul a, i {
+  cursor: pointer;
   color: #2d2e32;
   font-weight: 600;
   transition: all .23s;
@@ -229,7 +233,7 @@ section{
   font-size: 1.1rem;
   width: 100%;
   padding: 0 2rem;
-  box-shadow: 100px 100px 100px rgba(81, 77, 77, 0.09);
+  /* box-shadow: 100px 100px 100px rgba(218, 38, 38, 0.09); */
 }
 
 .nav-collapse ul a{
@@ -238,7 +242,7 @@ section{
   font-weight: 600;
   text-decoration: none;
   padding: 0.5rem;
-  border-bottom: solid rgb(209, 204, 204);
+  border-bottom: solid rgb(226, 219, 219);
 }
 
 
@@ -359,7 +363,12 @@ section{
     }
     #hamburger{
         display: block;
-        cursor: pointer;
+        
+    }
+
+    #hamburger i{
+      font-size: 1.4rem;
+      cursor: pointer;
     }
 
     .profile-img{
