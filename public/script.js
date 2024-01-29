@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
 
         // Use fetch to send a POST request to the server-side endpoint
-        fetch("/", {
+        fetch("https://manjeet-kumar.vercel.app/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
