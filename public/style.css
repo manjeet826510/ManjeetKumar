@@ -104,8 +104,12 @@ section{
 }
 
 .skill-card{
-  margin: 3rem;
+  width: 22%;
 }
+
+/* .skill-card{
+  margin: 3rem;
+} */
 
 .contact-card span a{
   /* background-color: orange; */
@@ -380,9 +384,9 @@ section{
     /* background-color: orange; */
   }
 
-  .skill-card{
+  /* .skill-card{
     margin: 0rem;
-  }
+  } */
 
   input, textarea {
     margin-bottom: 15px;
