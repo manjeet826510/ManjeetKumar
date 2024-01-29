@@ -20,12 +20,17 @@ body{
     /* overflow-x: hidden; */
 }
 
+
 section{
-  padding-top: 7rem;
+  /* padding-top: 7rem; */
 }
 
 #projectsid, #skillsid{
-  padding: 2rem;
+  /* padding: 2rem; */
+}
+#homeid, #contactsid{
+  /* margin-top: 5rem; */
+  /* padding: 1rem; */
 }
 
 .home-title{
@@ -46,7 +51,7 @@ section{
   justify-content: center;
   align-items: center;
 }
-.projects, .contacts, .skills{
+.projects, .contacts, .skills, .home{
   background-color: #f6f6f6;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -59,6 +64,7 @@ section{
   justify-content: center;
   align-items: center;
 }
+
 
 .project-card, .contact-card, .skill-card{
   /* background-color: #2980b9; */
@@ -73,7 +79,6 @@ section{
 
 .skill-card{
   margin: 3rem;
-  padding: 3rem;
 }
 
 .contact-card span a{
@@ -198,7 +203,7 @@ section{
   /* background-color: orangered; */
   display: flex;
   flex-direction: column;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   width: 100%;
   padding: 0 2rem;
   box-shadow: 100px 100px 100px rgba(81, 77, 77, 0.09);
@@ -216,9 +221,10 @@ section{
 
 /* home */
 
-#homeid, #contactsid{
-  /* margin-top: 5rem; */
-  padding: 1rem;
+
+
+.contacts-section{
+  padding-top: 2rem;
 }
 
 .home-section, .contacts-section{
@@ -234,23 +240,10 @@ section{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
-.home{
-  background-color: #f6f6f6;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  color: #000;
-  /* overflow: hidden; */
-  width: 90%;
-  height: 90%;
-  /* background-color: #2ecc71; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .home-card{
   /* background-color: #2980b9; */
@@ -325,7 +318,15 @@ section{
     /* margin-right: 10px; */
     font-size: 24px;
     color: #3498db;
-  } */
+  }
+  
+  .home span a{
+    margin: 0.3rem;
+  }
+
+  .brand{
+    color: blue;
+  }
 
   .skill-list {
     list-style: none;
@@ -355,6 +356,7 @@ section{
     }
     .navbar{
       margin: 0;
+      padding: 0rem 1rem;
     }
     #hamburger{
         display: block;
@@ -365,9 +367,13 @@ section{
       width: 100%;
     }
 
-  .project-card, .home-card{
-    width: 80%;
+  .project-card, .home-card, .contact-card, .skill-card{
+    width: 85%;
     /* background-color: orange; */
+  }
+
+  .skill-card{
+    margin: 0rem;
   }
 
   input, textarea {
@@ -379,7 +385,7 @@ section{
   }
 
   .contact-card form{
-    padding: 2rem 0rem 
+    padding: 2rem 0rem ;
   }
 
   .skill-card{
@@ -391,6 +397,10 @@ section{
     padding: 0px;
   }
 
+  .home{
+    width: 100%;
+  }
+
  
 
 
@@ -398,15 +408,11 @@ section{
 @media (max-width: 1250px) {
 
 .home-card{
-    width: 70%;
+    width: 75%;
   }
 
-  .contact-card{
-    width: 70%;
-  }
-  .skill-card{
-    /* background-color: orange; */
-    width: 80%;
+  .contact-card, .skill-card, .home-card{
+    width: 85%;
   }
   }
 

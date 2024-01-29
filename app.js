@@ -1,32 +1,47 @@
-const express = require('express');
-const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
+import express from 'express';
+import { createTransport } from 'nodemailer';
+import path from 'path';
+import cors from "cors";
+import dotenv from "dotenv"
+
+dotenv.config();
 
 const app = express();
-const port = 3000; // or any port you prefer
+const port = 5000;
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+// Enable CORS
+app.use(cors());
 
-// Serve your static files (HTML, CSS, JavaScript)
-app.use(express.static('public'));
+app.use(express.json());
 
-app.post('/send-email', (req, res) => {
+app.use(express.urlencoded({ extended: true }));
+
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "/public")));
+app.get("*", (req, res) =>
+  res.sendFile(path.join(__dirname, "/public/index.html"))
+);
+
+
+app.post('/', (req, res) => {
     const { name, email, message } = req.body;
+    // console.log(name);
+    // console.log(email);
+    // console.log(message);
 
     // Create a transporter using your email service (e.g., Gmail)
-    const transporter = nodemailer.createTransport({
+    const transporter = createTransport({
         service: 'gmail',
         auth: {
-            user: 'your-email@gmail.com', // your email
-            pass: 'your-email-password'  // your email password or an app-specific password
+            user: process.env.USER, // your email
+            pass: process.env.PASS  // your email password or an app-specific password
         }
     });
 
     // Set up email data
     const mailOptions = {
         from: email,
-        to: 'your-email@example.com', // recipient's email
+        to: process.env.TO, // recipient's email
         subject: `New message from ${name}`,
         text: message
     };
@@ -43,6 +58,10 @@ app.post('/send-email', (req, res) => {
     });
 });
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+
+
+
+app.listen(port, "0.0.0.0", () => {
+  console.log(`server is listening at :${port}`);
 });
+
