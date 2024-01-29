@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
 
         // Use fetch to send a POST request to the server-side endpoint
-        fetch("https://manjeet-kumar.onrender.com/", {
+        fetch("/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
