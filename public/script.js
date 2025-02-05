@@ -8,7 +8,7 @@ const fun = () => {
 ham[0].addEventListener('click',fun);
 
 const download = () => {
-    window.open('https://mymernbucket-amazona.s3.ap-south-1.amazonaws.com/Resume_ManjeetKumar.pdf', '_blank');
+    window.open('https://mymernbucket-amazona.s3.ap-south-1.amazonaws.com/Copy+of+manjeet_resume+(12).pdf', '_blank');
 };
 
 
